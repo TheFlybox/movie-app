@@ -13,6 +13,7 @@ export function MoviesComponent() {
   const [popularMovies, setPopularMovies] = useState<Movie[]>([]);
   const [topRatedMovies, setTopRatedMovies] = useState<Movie[]>([]);
   const [upcomingMovies, setUpcomingMovies] = useState<Movie[]>([]);
+  const [nowPlayingMovies, setNowPlayingMovies] = useState<Movie[]>([]);
   const selectedMovie = useSelector((state: AppState) => state.selectedMovie.selectedMovie);
   const movieDetailsVisible = useSelector((state: AppState) => state.selectedMovie.detailsVivible);
   const dispatch = useDispatch();
@@ -35,11 +36,20 @@ export function MoviesComponent() {
     movieService.getUpcomingMovies().then(response => {
       setUpcomingMovies(response.results);
     });
+    movieService.getNowPlaying().then(response => {
+      setNowPlayingMovies(response.results);
+    });
   }, []);
 
   return (
     <div className='movies pt-4'>
       <div className='container'>
+        <MoviesCarouselComponent
+          onMoviePostClick={(e) => openMovieDetails(e)}
+          header='Now Playing Movies'
+          movies={nowPlayingMovies}
+          />
+        <br />
         <MoviesCarouselComponent
           onMoviePostClick={(e) => openMovieDetails(e)}
           header='Upconming Movies'

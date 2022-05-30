@@ -30,6 +30,11 @@ export class MovieService extends ServiceEntity{
     .then(result => result.data);
   }
 
+  async getNowPlaying(): Promise<MovieResponse> {
+    return axios.get<MovieResponse>(this.getFormattedURL(MovieApiUrls.NOW_PLAYING))
+    .then(result => result.data);
+  }
+
   async getMoviesByQuery(query: string, page: number = 1) {
     return axios
       .get<MovieResponse>(this.getFormattedURL(MovieApiUrls.SEARCH), {
