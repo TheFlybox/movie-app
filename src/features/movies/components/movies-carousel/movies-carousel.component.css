@@ -1,0 +1,10 @@
+
+.swiper {
+  min-height: 480px;
+}
+.swiper-pagination-bullet {
+  background: #eee !important;
+}
+.swiper-button-next, .swiper-button-prev {
+  color: #fff !important;
+}

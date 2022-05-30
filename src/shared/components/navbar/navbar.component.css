@@ -1,0 +1,26 @@
+
+.navbar {
+  min-height: 72px;
+  align-items: center;
+  display: flex;
+  background-color: var(--surface-0);
+}
+.custom-menubar {
+  padding: 0rem !important;
+}
+.custom-menubar .p-menuitem span {
+  color: white !important;
+}
+.custom-menubar .p-menuitem.active{
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+}
+.custom-menubar .p-menuitem:hover > .p-menuitem-link {
+  background: #333 !important;
+}
+.custom-menubar .p-menubar-root-list {
+  margin-left: auto;
+}
+.logo {
+  width: 32px;
+}

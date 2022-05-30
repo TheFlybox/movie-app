@@ -1,0 +1,11 @@
+.movie-details .movie-details-poster {
+  object-fit: cover;
+}
+.divider {
+  height: 20px;
+  width: 1px;
+  background: #aaa;
+}
+.p-rating .p-rating-icon {
+  font-size: 24px !important;
+}

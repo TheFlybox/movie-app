@@ -1,0 +1,7 @@
+.favorite-item {
+  width: calc(100% / 5 - 4rem);
+  margin: 2rem;
+}
+.empty-list-icon {
+  font-size: 64px !important;
+}

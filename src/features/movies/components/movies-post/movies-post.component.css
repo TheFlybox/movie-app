@@ -1,0 +1,33 @@
+
+.movie-post {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+}
+
+.movie-post .image {
+  position: relative;
+}
+
+.movie-post .movie-post-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.movie-post .movie-post-image:hover {
+  transform: scale(1.05);
+  transition: all ease-in-out 0.2s;
+  filter: opacity(75%);
+}
+
+.favorite-button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 9999;
+  color: #fff;
+  font-size: 24px !important;
+}
+.favorite-button.is-favorite {
+  color: var(--pink-500);
+}
